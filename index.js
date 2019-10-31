@@ -1,29 +1,81 @@
-const fs = require('fs');
-const http = require('http');
+const express = require('express');
+const app = express();
+const bodyparser = require('body-parser');
+const port = process.env.PORT || 8080;
 const path = require('path');
-const renderPage = require('./server/renderPage');
-const setFilePath = require('./server/setFilePath');
-const setContentType = require('./server/setContentType');
 
-const server = http.createServer(
-    (req, res) => {
-        let filePath = setFilePath({
-            req,
-            path
-        });
+const login = require('./cms/login');
+const content = require('./cms/content');
 
-        let contentType = setContentType(path.extname(filePath));
+app.use(bodyparser.urlencoded({ extended: false }));
+app.use(bodyparser.json());
 
-        renderPage({
-            fs,
-            res,
-            path,
-            filePath,
-            contentType,
-        });
+app.use(express.static(__dirname + '/public'));
+
+app.post('/api/v1/login', (request, response) => {
+    if(request.method !== 'POST') {
+        return;
     }
-);
 
-const PORT = process.env.PORT || 8080;
+    login(request, response);
+});
 
-server.listen(PORT);
+app.get('/api/v1/home', (request, response) => {
+    if(request.method !== 'GET') {
+        return;
+    }
+
+    content.home(request, response);
+});
+
+app.get('/api/v1/blog', (request, response) => {
+    if(request.method !== 'GET') {
+        return;
+    }
+
+    content.blog(request, response);
+});
+
+app.get('/api/v1/menu', (request, response) => {
+    if(request.method !== 'GET') {
+        return;
+    }
+
+    content.menu(request, response);
+});
+
+app.get('/api/v1/contact', (request, response) => {
+    if(request.method !== 'GET') {
+        return;
+    }
+
+    content.contact(request, response);
+});
+
+app.get('/api/v1/ourstory', (request, response) => {
+    if(request.method !== 'GET') {
+        return;
+    }
+
+    content.ourstory(request, response);
+});
+
+app.get('/api/v1/footer', (request, response) => {
+    if(request.method !== 'GET') {
+        return;
+    }
+
+    content.footer(request, response);
+});
+
+app.get('*', (request, response) => {
+    response.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.listen(port, (err) => {
+    if (err) {
+        return console.log('something bad happened', err);
+    }
+
+    console.log(`server is listening on ${port}`);
+});

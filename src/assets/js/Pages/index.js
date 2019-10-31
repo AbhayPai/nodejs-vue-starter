@@ -5,11 +5,12 @@ require('SassPath/pages/index.scss');
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import Login from 'ComponentsPath/Login/Login';
 import Routers from 'ComponentsPath/Routers/Index';
 import HomeIndex from 'ComponentsPath/Contents/Home/HomeIndex';
 import MenuIndex from 'ComponentsPath/Contents/Menu/MenuIndex';
 import BlogIndex from 'ComponentsPath/Contents/Blog/BlogIndex';
-import PageNotFound from 'ComponentsPath/Routers/PageNotFound';
+import PageNotFound from 'ComponentsPath/NotFound/PageNotFound';
 import OurStoryIndex from 'ComponentsPath/Contents/OurStory/OurStoryIndex';
 import ContactReservationIndex from 'ComponentsPath/Contents/ContactReservation/ContactReservationIndex';
 
@@ -32,7 +33,7 @@ const router = new VueRouter({
             name: 'Our Story',
             display: true,
             component: OurStoryIndex,
-            path: '/our-story',
+            path: '/ourstory',
         },
         {
             target: '',
@@ -54,6 +55,13 @@ const router = new VueRouter({
             display: true,
             component: ContactReservationIndex,
             path: '/contact',
+        },
+        {
+            target: '',
+            name: 'Login',
+            display: false,
+            component: Login,
+            path: '/login',
         },
         {
             path: '*',
