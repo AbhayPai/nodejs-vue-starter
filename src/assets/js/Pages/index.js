@@ -7,12 +7,12 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Login from 'ComponentsPath/Login/Login';
 import Routers from 'ComponentsPath/Routers/Index';
-import HomeIndex from 'ComponentsPath/Contents/Home/HomeIndex';
-import MenuIndex from 'ComponentsPath/Contents/Menu/MenuIndex';
-import BlogIndex from 'ComponentsPath/Contents/Blog/BlogIndex';
-import PageNotFound from 'ComponentsPath/NotFound/PageNotFound';
-import OurStoryIndex from 'ComponentsPath/Contents/OurStory/OurStoryIndex';
-import ContactReservationIndex from 'ComponentsPath/Contents/ContactReservation/ContactReservationIndex';
+import HomeIndex from 'ComponentsPath/Contents/HomeIndex';
+import MenuIndex from 'ComponentsPath/Contents/MenuIndex';
+import BlogIndex from 'ComponentsPath/Contents/BlogIndex';
+import PageNotFound from 'ComponentsPath/Contents/PageNotFound';
+import OurStoryIndex from 'ComponentsPath/Contents/OurStoryIndex';
+import ContactReservationIndex from 'ComponentsPath/Contents/ContactReservationIndex';
 
 Vue.config.productionTip = false;
 

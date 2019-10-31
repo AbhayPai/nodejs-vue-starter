@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import FooterIndex from 'ComponentsPath/Contents/Footers/FooterIndex';
+import FooterIndex from 'ComponentsPath/Contents/FooterIndex';
 
 export default {
     name: 'Routers',

@@ -39,12 +39,10 @@ export default {
                     pwd: this.pwd,
                 })
                 .then((response) => {
-                    // eslint-disable-next-line
-                    console.log(response.data.status);
+                    // WIP
                 })
                 .catch((error) => {
-                    // eslint-disable-next-line
-                    console.log(error);
+                    // WIP
                 });
         },
         routeHandler: function(redirect) {

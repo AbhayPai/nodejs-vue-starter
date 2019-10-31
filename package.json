@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AbhayPai/ap-theme-restaurant.git"
+    "url": "git+https://github.com/AbhayPai/ap-nodejs-vue.git"
   },
   "keywords": [
     "nodejs",
@@ -76,5 +76,5 @@
     "webpack-cli": "^3.3.6",
     "webpack-manifest-plugin": "^2.0.4"
   },
-  "homepage": "https://github.com/AbhayPai/basic-server#readme"
+  "homepage": "https://github.com/AbhayPai/ap-nodejs-vue#readme"
 }
