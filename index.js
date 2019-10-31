@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+let cors = require('cors');
 const bodyparser = require('body-parser');
 const port = process.env.PORT || 8080;
 const path = require('path');
@@ -9,8 +10,8 @@ const content = require('./cms/content');
 
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
-
 app.use(express.static(__dirname + '/public'));
+app.use(cors());
 
 app.post('/api/v1/login', (request, response) => {
     if(request.method !== 'POST') {

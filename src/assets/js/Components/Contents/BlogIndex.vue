@@ -1,5 +1,15 @@
 <template>
-    <div v-html="data" />
+    <div>
+        <div v-if="loading" class="bg-white m-10 p-10 text-center">
+            <button class="btn btn-lg btn-primary">
+                <i class="glyphicon glyphicon-download-alt" />
+            </button>
+        </div>
+        
+        <div v-if="error" v-html="error" />
+        
+        <div v-if="data" v-html="data" />
+    </div>
 </template>
 
 <script>
@@ -11,7 +21,7 @@ export default {
         return {
             data: null,
             error: null,
-            loading: false
+            loading: true
         };
     },
     created: function() {
@@ -19,14 +29,14 @@ export default {
     },
     methods: {
         getContentBlog: function() {
-            this.loading = true;
-
             axios.get('/api/v1/blog')
                 .then((response) => {
                     this.data = response.data.data;
+                    this.loading = false;
                 })
                 .catch((err) => {
                     this.error = err.toString();
+                    this.loading = false;
                 });
         }
     }

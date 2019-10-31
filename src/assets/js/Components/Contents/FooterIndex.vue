@@ -22,7 +22,7 @@ export default {
             },
             data: null,
             error: null,
-            loading: false
+            loading: true
         };
     },
     created: function() {
@@ -30,14 +30,14 @@ export default {
     },
     methods: {
         getContentFooter: function() {
-            this.loading = true;
-
             axios.get('/api/v1/footer')
                 .then((response) => {
                     this.data = response.data.data;
+                    this.loading = false;
                 })
                 .catch((err) => {
                     this.error = err.toString();
+                    this.loading = false;
                 });
         }
     }
