@@ -28,7 +28,7 @@ module.exports = function(config) {
     this.createHtml = function() {
         return [
             new config.HtmlWebpackPlugin({
-                title: 'Nodejs with Vuejs',
+                title: 'Nodejs with Vue',
                 inject: false,
                 minify: {
                     removeComments: true,
