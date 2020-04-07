@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 let cors = require('cors');
 const bodyparser = require('body-parser');
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8000;
 const path = require('path');
 
 const login = require('./cms/login');

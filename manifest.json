@@ -1,8 +1,8 @@
 {
-  "index.css": "./public/css/index.1572511072151.css",
-  "index.js": "public/js/index.1572511072151.js",
-  "vendor.css": "./public/css/vendor.1572511072151.css",
-  "vendor.js": "public/js/vendor.1572511072151.js",
+  "index.css": "./public/css/index.1586224892349.css",
+  "index.js": "public/js/index.1586224892349.js",
+  "vendor.css": "./public/css/vendor.1586224892349.css",
+  "vendor.js": "public/js/vendor.1586224892349.js",
   "/images/index.scss": "/./images/index.webp",
   "public/images/Readme.md": "public/images/Readme.md",
   "public/images/ap-logo.jpg": "public/images/ap-logo.jpg",
@@ -34,13 +34,13 @@
   "public/images/menu/maincourse/maincourse4.jpg": "public/images/menu/maincourse/maincourse4.jpg",
   "public/images/menu/maincourse/maincourse5.jpg": "public/images/menu/maincourse/maincourse5.jpg",
   "public/images/menu/maincourse/maincourse6.jpg": "public/images/menu/maincourse/maincourse6.jpg",
-  "public/images/sliders/1.jpg": "public/images/sliders/1.jpg",
-  "public/images/sliders/2.jpg": "public/images/sliders/2.jpg",
-  "public/images/sliders/3.jpg": "public/images/sliders/3.jpg",
+  "public/images/sliders/1.png": "public/images/sliders/1.png",
+  "public/images/sliders/2.png": "public/images/sliders/2.png",
+  "public/images/sliders/3.png": "public/images/sliders/3.png",
   "public/images/socials/fb.png": "public/images/socials/fb.png",
   "public/images/socials/ig.png": "public/images/socials/ig.png",
   "public/images/socials/yt.png": "public/images/socials/yt.png",
   "public/images/testimonials/avatar.png": "public/images/testimonials/avatar.png",
-  "public/js/jquery.min.js": "public/js/jquery.min.js",
-  "public/index.html": "public/index.html"
+  "public/index.html": "public/index.html",
+  "public/js/jquery.min.js": "public/js/jquery.min.js"
 }
